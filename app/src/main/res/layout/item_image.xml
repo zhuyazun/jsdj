@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="@dimen/DIMEN_270PX"
+        android:layout_height="@dimen/DIMEN_270PX"
+        android:scaleType="fitXY"
+        tool:src="@mipmap/ic_launcher"
+        />
+</LinearLayout>

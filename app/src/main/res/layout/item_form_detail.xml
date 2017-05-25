@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/DIMEN_30PX"
+    android:layout_marginRight="@dimen/DIMEN_30PX"
+    android:background="#fff">
+
+
+    <RelativeLayout
+        android:id="@+id/user_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/DIMEN_30PX"
+        android:paddingRight="@dimen/DIMEN_30PX"
+        android:paddingLeft="@dimen/DIMEN_30PX">
+
+        <ImageView
+            android:id="@+id/user_avatar"
+            android:layout_width="@dimen/DIMEN_150PX"
+            android:layout_height="@dimen/DIMEN_150PX"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/DIMEN_45PX"
+            android:layout_toRightOf="@id/user_avatar"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp"
+            tool:text="用户名" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/user_avatar"
+            android:layout_marginLeft="@dimen/DIMEN_45PX"
+            android:layout_toRightOf="@id/user_avatar"
+            tool:text="2010-01-01" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_layout"
+        android:layout_marginLeft="@dimen/DIMEN_30PX"
+        android:layout_marginRight="@dimen/DIMEN_30PX"
+        android:layout_marginTop="@dimen/DIMEN_60PX"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/colorBlackText"
+        android:textSize="17sp"
+        tool:text="测一下标题" />
+
+    <WebView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_margin="@dimen/DIMEN_30PX" />
+
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/DIMEN_270PX"
+        android:layout_below="@id/content"
+        android:layout_marginLeft="@dimen/DIMEN_30PX"
+        android:layout_marginRight="@dimen/DIMEN_30PX"
+        android:numColumns="3" />
+
+
+    <LinearLayout
+        android:id="@+id/share_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grid_view"
+        android:gravity="center_vertical"
+        android:paddingRight="@dimen/DIMEN_30PX"
+        android:paddingLeft="@dimen/DIMEN_30PX">
+
+        <View
+            android:layout_width="@dimen/DIMEN_60PX"
+            android:layout_height="@dimen/DIMEN_60PX"
+            android:background="@mipmap/see" />
+
+        <TextView
+            android:id="@+id/showTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/DIMEN_20PX"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/DIMEN_30PX"
+            android:paddingLeft="@dimen/DIMEN_15PX"
+            android:paddingRight="@dimen/DIMEN_30PX"
+            android:paddingTop="@dimen/DIMEN_30PX"
+            tool:text="123" />
+
+        <View
+            android:layout_width="@dimen/DIMEN_60PX"
+            android:layout_height="@dimen/DIMEN_60PX"
+            android:background="@mipmap/like_number" />
+
+        <TextView
+            android:id="@+id/likeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/DIMEN_20PX"
+            android:paddingBottom="@dimen/DIMEN_30PX"
+            android:paddingLeft="@dimen/DIMEN_15PX"
+            android:paddingRight="@dimen/DIMEN_30PX"
+            android:paddingTop="@dimen/DIMEN_30PX"
+            tool:text="123" />
+
+        <View
+            android:layout_width="@dimen/DIMEN_60PX"
+            android:layout_height="@dimen/DIMEN_60PX"
+            android:layout_marginLeft="@dimen/DIMEN_60PX"
+            android:background="@mipmap/tag2" />
+
+        <TextView
+            android:id="@+id/commentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/DIMEN_20PX"
+            android:paddingBottom="@dimen/DIMEN_30PX"
+            android:paddingLeft="@dimen/DIMEN_15PX"
+            android:paddingRight="@dimen/DIMEN_30PX"
+            android:paddingTop="@dimen/DIMEN_30PX"
+            tool:text="123" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/tem2_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_30PX"
+        android:layout_below="@id/share_layout"
+        android:background="#eee" />
+
+    <TextView
+        android:id="@+id/commentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="留言(123)"
+        android:layout_below="@id/tem2_view"
+        android:layout_margin="@dimen/DIMEN_30PX"
+        />
+</RelativeLayout>
+
+

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/DIMEN_30PX"
+    android:background="#fff"
+    >
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_180PX"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="fitStart"
+        android:layout_marginRight="@dimen/DIMEN_30PX"
+        android:layout_marginLeft="@dimen/DIMEN_30PX"
+        android:transitionName="image"
+        />
+
+    <TextView
+        android:id="@+id/tem_title_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view"
+        android:text="标题:"
+        android:layout_marginTop="@dimen/DIMEN_30PX"
+        android:paddingLeft="@dimen/DIMEN_30PX"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view"
+        android:layout_toRightOf="@id/tem_title_hint"
+        tool:text="asdasdasdasdasd"
+        android:layout_alignTop="@id/tem_title_hint"
+        android:paddingRight="@dimen/DIMEN_30PX"
+        />
+
+    <TextView
+        android:id="@+id/tem_price_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tem_title_hint"
+        android:text="价格:"
+        android:layout_marginTop="@dimen/DIMEN_30PX"
+        android:paddingLeft="@dimen/DIMEN_30PX"
+        />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view"
+        android:layout_toRightOf="@id/tem_price_hint"
+        tool:text="asdasdasdasdasd"
+        android:layout_alignTop="@id/tem_price_hint"
+        android:paddingRight="@dimen/DIMEN_30PX"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddddd"
+        android:layout_below="@id/price"
+        android:layout_marginTop="@dimen/DIMEN_30PX"
+        />
+</RelativeLayout>

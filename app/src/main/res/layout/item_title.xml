@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <View
+        android:id="@+id/tem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_15PX"
+        android:background="#eee"
+        />
+    <ImageView
+        android:id="@+id/logo_img"
+        android:layout_width="@dimen/DIMEN_90PX"
+        android:layout_height="@dimen/DIMEN_90PX"
+        android:layout_marginLeft="@dimen/DIMEN_30PX"
+        android:layout_below="@id/tem"
+        tool:src="@mipmap/new_tag"
+        />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="最新供应"
+        android:textColor="#353636"
+        android:textSize="17sp"
+        android:layout_below="@id/tem"
+        android:layout_toRightOf="@id/logo_img"
+        android:paddingLeft="@dimen/DIMEN_20PX"
+        android:paddingTop="@dimen/DIMEN_10PX"
+        android:paddingBottom="@dimen/DIMEN_10PX"
+        android:layout_marginLeft="@dimen/DIMEN_20PX"
+        />
+</RelativeLayout>

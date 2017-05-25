@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/DIMEN_30PX"
+        android:background="#fff"
+        android:paddingRight="@dimen/DIMEN_30PX"
+        android:paddingLeft="@dimen/DIMEN_30PX">
+
+        <TextView
+            android:id="@+id/message_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tool:text="我是内容我是内容"
+            android:paddingTop="@dimen/DIMEN_30PX"
+            />
+
+        <TextView
+            android:id="@+id/message_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tool:text="我是时间"
+            android:gravity="right"
+            android:paddingBottom="@dimen/DIMEN_30PX"
+            android:paddingTop="@dimen/DIMEN_10PX"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

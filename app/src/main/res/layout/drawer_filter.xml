@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/tem2_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e7e7e7"
+        android:paddingBottom="@dimen/DIMEN_30PX"
+        android:paddingLeft="@dimen/DIMEN_60PX"
+        android:paddingTop="@dimen/DIMEN_30PX"
+        android:text="筛选"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:id="@+id/tem3_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/reset"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/DIMEN_120PX"
+            android:text="重置"
+            android:gravity="center"
+            android:background="#dd8265"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            />
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/DIMEN_120PX"
+            android:text="保存"
+            android:gravity="center"
+            android:background="#c24739"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            />
+    </LinearLayout>
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@id/tem2_view"
+        android:layout_above="@id/tem3_view"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <CheckBox
+                android:id="@+id/send_date_cb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:button="@null"
+                android:drawableRight="@drawable/drawer_state_selector"
+                android:padding="@dimen/DIMEN_30PX"
+                android:text="发布时间"
+                android:textColor="@color/colorBlackText" />
+
+            <com.sum.alchemist.widget.MyRadioGroup
+                android:id="@+id/send_date_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/time_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="所有" />
+
+                    <RadioButton
+                        android:id="@+id/time_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="24小时内" />
+
+                    <RadioButton
+                        android:id="@+id/time_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="近三天" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/time_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="近一周" />
+
+                    <RadioButton
+                        android:id="@+id/time_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="近一月" />
+                </LinearLayout>
+            </com.sum.alchemist.widget.MyRadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eee" />
+
+            <CheckBox
+                android:id="@+id/money_cb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:button="@null"
+                android:drawableRight="@drawable/drawer_state_selector"
+                android:padding="@dimen/DIMEN_30PX"
+                android:text="金额范围"
+                android:textColor="@color/colorBlackText" />
+
+            <com.sum.alchemist.widget.MyRadioGroup
+                android:id="@+id/money_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/money_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="所有" />
+
+                    <RadioButton
+                        android:id="@+id/money_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2K/月" />
+
+                    <RadioButton
+                        android:id="@+id/money_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2-3K/月" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/money_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3-4.5K/月" />
+
+                    <RadioButton
+                        android:id="@+id/money_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.5-8K/月" />
+
+                    <RadioButton
+                        android:id="@+id/money_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8-10K/月" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/money_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10K/月以上" />
+                </LinearLayout>
+            </com.sum.alchemist.widget.MyRadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eee" />
+
+            <TextView
+                android:id="@+id/location_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:drawableRight="@mipmap/icon_right_gray"
+                android:padding="@dimen/DIMEN_30PX"
+                android:text="所在地区"
+                android:textColor="@color/colorBlackText" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eee" />
+
+            <CheckBox
+                android:id="@+id/company_cb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:button="@null"
+                android:drawableRight="@drawable/drawer_state_selector"
+                android:padding="@dimen/DIMEN_30PX"
+                android:text="企业性质"
+                android:textColor="@color/colorBlackText" />
+
+            <com.sum.alchemist.widget.MyRadioGroup
+                android:id="@+id/company_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/company_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="所有" />
+
+                    <RadioButton
+                        android:id="@+id/company_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="合资" />
+
+                    <RadioButton
+                        android:id="@+id/company_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="国企" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/company_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="民营" />
+
+                    <RadioButton
+                        android:id="@+id/company_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上市公司" />
+                </LinearLayout>
+            </com.sum.alchemist.widget.MyRadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eee" />
+
+            <CheckBox
+                android:id="@+id/company_size_cb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:button="@null"
+                android:drawableRight="@drawable/drawer_state_selector"
+                android:padding="@dimen/DIMEN_30PX"
+                android:text="企业规模"
+                android:textColor="@color/colorBlackText" />
+
+            <com.sum.alchemist.widget.MyRadioGroup
+                android:id="@+id/company_size_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/company_size_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="所有" />
+
+                    <RadioButton
+                        android:id="@+id/company_size_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="少于50人" />
+
+                    <RadioButton
+                        android:id="@+id/company_size_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50-150人" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/company_size_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="150-500人" />
+
+                    <RadioButton
+                        android:id="@+id/company_size_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="500人以上" />
+                </LinearLayout>
+            </com.sum.alchemist.widget.MyRadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#eee" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

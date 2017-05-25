@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#cc3333"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        >
+
+        <View
+            android:id="@+id/menu"
+            android:layout_width="@dimen/DIMEN_90PX"
+            android:layout_height="@dimen/DIMEN_90PX"
+            android:layout_marginLeft="@dimen/DIMEN_30PX"
+            android:layout_marginRight="@dimen/DIMEN_30PX"
+            android:background="@mipmap/menu" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rec_solid_white_stroke_corners_grey">
+
+            <View
+                android:id="@+id/search"
+                android:layout_width="@dimen/DIMEN_90PX"
+                android:layout_height="@dimen/DIMEN_90PX"
+                android:background="@mipmap/search_grey"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/DIMEN_30PX"
+                />
+
+            <EditText
+                android:id="@+id/search_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/search"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/DIMEN_30PX"
+                android:hint="请输入关键字"
+                android:textSize="17sp"
+                android:maxLines="1"
+                android:inputType="textAutoComplete"
+                android:textColor="#a19fa0"
+                android:background="@null"
+                android:padding="@dimen/DIMEN_15PX"
+                android:imeOptions="actionSearch"
+                />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/filter"
+            android:layout_width="@dimen/DIMEN_90PX"
+            android:layout_height="@dimen/DIMEN_90PX"
+            android:layout_marginLeft="@dimen/DIMEN_30PX"
+            android:layout_marginRight="@dimen/DIMEN_30PX"
+            android:background="@mipmap/filter" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_120PX"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_sell"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/white_to_red_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="最新供应"
+            android:textColor="@color/black_to_white_selector" />
+
+        <RadioButton
+            android:id="@+id/radio_purchase"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/white_to_red_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="最新求购"
+            android:textColor="@color/black_to_white_selector" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorWhiteText" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/DIMEN_10PX">
+
+            </android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FAFAFA"
+            android:gravity="center"
+            android:text="暂无数据"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

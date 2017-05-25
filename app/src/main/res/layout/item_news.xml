@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:padding="@dimen/DIMEN_30PX">
+
+    <ImageView
+        android:id="@+id/logo_img"
+        android:layout_width="@dimen/DIMEN_260PX"
+        android:layout_height="@dimen/DIMEN_200PX"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/DIMEN_20PX"
+        android:layout_toRightOf="@id/logo_img"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/news_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#434141"
+            android:textSize="17sp"
+            tool:text="标题" />
+
+        <TextView
+            android:id="@+id/news_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="17sp"
+            tool:text="内容" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:layout_marginTop="@dimen/DIMEN_30PX">
+
+            <View
+                android:layout_width="@dimen/DIMEN_60PX"
+                android:layout_height="@dimen/DIMEN_60PX"
+                android:background="@mipmap/see" />
+
+            <TextView
+                android:id="@+id/see_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                tool:text="123" />
+
+            <View
+                android:layout_width="@dimen/DIMEN_60PX"
+                android:layout_height="@dimen/DIMEN_60PX"
+                android:layout_marginLeft="@dimen/DIMEN_60PX"
+                android:background="@mipmap/like_number" />
+
+            <TextView
+                android:id="@+id/like_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                tool:text="123" />
+
+            <TextView
+                android:id="@+id/news_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DIMEN_30PX"
+                android:maxLines="1"
+                android:textSize="13sp"
+                tool:text="2016-10-20" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

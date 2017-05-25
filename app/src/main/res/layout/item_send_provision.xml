@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/DIMEN_30PX"
+    android:paddingLeft="@dimen/DIMEN_30PX"
+    android:paddingRight="@dimen/DIMEN_30PX">
+
+
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="签到成功"
+        />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="1990-04-12"
+        android:layout_below="@id/detail"
+        android:layout_marginTop="@dimen/DIMEN_30PX"
+        />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="供应"
+        android:paddingRight="@dimen/DIMEN_30PX"
+        android:paddingLeft="@dimen/DIMEN_30PX"
+        android:paddingTop="@dimen/DIMEN_9PX"
+        android:paddingBottom="@dimen/DIMEN_9PX"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorWhiteText"
+        android:layout_below="@id/date"
+        android:layout_marginTop="@dimen/DIMEN_15PX"
+        />
+
+
+</RelativeLayout>

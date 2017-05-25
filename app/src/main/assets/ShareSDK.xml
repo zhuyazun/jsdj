@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevInfor>
+    
+    <ShareSDK 
+        AppKey = "15d851c08de52"/> <!-- 修改成你在sharesdk后台注册的应用的appkey"-->
+    
+	<!-- RedirectUrl="http://mob.com"   363273537201419   f8df3ac56823d0340ab04b7dd81dec91
+	facebook 317799504975792  06eb885af5ca3ae75a877800983907d3
+	twitter Io75bKIWhWKYcD0Gf5vaD55Uj 7fZCibx5HwSZezHWTRzKEJN5dpxffOrH8dQkKBAq3G2V609oWz
+	-->
+    <SinaWeibo
+        Id="1"
+        SortId="1"
+        AppKey="849331738"
+        AppSecret="cc345b3ad37abbbb97a9f777b1f2ef07"
+        RedirectUrl="https://api.weibo.com/oauth2/default.html"
+        ShareByAppClient="true"
+        Enable="true" />
+    <!--
+    	Wechat微信和WechatMoments微信朋友圈的appid是一样的；
+
+                       注意：开发者不能用我们这两个平台的appid,否则分享不了
+
+       	  微信测试的时候，微信测试需要先签名打包出apk,
+		sample测试微信，要先签名打包，keystore在sample项目中，密码123456
+
+		BypassApproval是绕过审核的标记，设置为true后AppId将被忽略，故不经过
+		审核的应用也可以执行分享，但是仅限于分享文字和图片，不能分享其他类型，
+		默认值为false。此外，微信收藏不支持此字段。
+	-->
+    <Wechat
+        Id="2"
+        SortId="2"
+        AppId="wxcc012112f3bf0e19"
+        AppSecret="6370f464a3a20891ad8fcadd4c185352"
+        BypassApproval="false"
+        Enable="true" />
+
+    <WechatMoments
+        Id="3"
+        SortId="3"
+        AppId="wxcc012112f3bf0e19"
+        AppSecret="6370f464a3a20891ad8fcadd4c185352"
+        BypassApproval="false"
+        Enable="true" />
+
+    <!-- ShareByAppClient标识是否使用微博客户端分享，默认是false -->
+    <QQ
+        Id="4"
+        SortId="4"
+        AppId="1105745161"
+        AppKey="gLeNTCeJiQfIcPcc"
+        ShareByAppClient="true"
+        Enable="true" />
+
+    <QZone
+        Id="5"
+        SortId="5"
+        AppId="1105745161"
+        AppKey="gLeNTCeJiQfIcPcc"
+        ShareByAppClient="true"
+        Enable="true" />
+    
+    
+</DevInfor>

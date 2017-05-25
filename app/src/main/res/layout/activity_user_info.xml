@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#fff">
+
+        <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_360PX"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="@dimen/DIMEN_24PX"
+            android:layout_height="@dimen/DIMEN_36PX"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/DIMEN_35PX"
+            android:background="@mipmap/icon_right_gray"
+            />
+        <com.sum.alchemist.widget.CircleImageView
+            android:id="@+id/user_avatar"
+            android:layout_width="@dimen/DIMEN_210PX"
+            android:layout_height="@dimen/DIMEN_210PX"
+            android:layout_toLeftOf="@id/view2"
+            android:layout_marginRight="@dimen/DIMEN_60PX"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/DIMEN_35PX"
+            android:src="@mipmap/user_ico" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/DIMEN_35PX"
+            android:text="头像"
+            android:textColor="#6e6e6e"
+            android:textSize="17sp"
+            />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIMEN_2PX"
+                android:background="@color/colorWhiteText"
+                />
+
+            <RelativeLayout
+                android:id="@+id/user_pro_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIMEN_150PX"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/DIMEN_35PX"
+                    android:text="详细信息:"
+                    android:textColor="#6e6e6e"
+                    android:textSize="17sp"
+                    android:id="@+id/textView" />
+
+                <View
+                    android:layout_width="@dimen/DIMEN_24PX"
+                    android:layout_height="@dimen/DIMEN_36PX"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/DIMEN_35PX"
+                    android:background="@mipmap/icon_right_gray"
+                    android:id="@+id/view" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIMEN_2PX"
+                android:background="@color/colorWhiteText" />
+            <RelativeLayout
+                android:id="@+id/user_phone_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIMEN_150PX"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/DIMEN_35PX"
+                    android:text="手机号码:"
+                    android:textColor="#6e6e6e"
+                    android:textSize="17sp"
+                    android:id="@+id/textView2" />
+
+                <View
+                    android:layout_width="@dimen/DIMEN_24PX"
+                    android:layout_height="@dimen/DIMEN_36PX"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/DIMEN_35PX"
+                    android:background="@mipmap/icon_right_gray"
+                    android:id="@+id/view3" />
+
+                <TextView
+                    android:id="@+id/user_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlackText"
+                    tool:text="asdasd"
+                    android:textSize="17sp"
+                    android:layout_alignBaseline="@+id/textView2"
+                    android:layout_alignBottom="@+id/textView2"
+                    android:layout_toLeftOf="@+id/view3"
+                    android:layout_toStartOf="@+id/view3"
+                    android:layout_marginRight="@dimen/DIMEN_20PX"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIMEN_2PX"
+                android:background="@color/colorWhiteText" />
+            <RelativeLayout
+                android:id="@+id/user_change_password_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIMEN_150PX"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/DIMEN_35PX"
+                    android:gravity="center_vertical"
+                    android:text="修改密码"
+                    android:textColor="#6e6e6e"
+                    android:textSize="17sp" />
+
+                <View
+                    android:layout_width="@dimen/DIMEN_24PX"
+                    android:layout_height="@dimen/DIMEN_36PX"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/DIMEN_35PX"
+                    android:background="@mipmap/icon_right_gray" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIMEN_2PX"
+                android:background="@color/colorWhiteText"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+                <ImageView
+                    android:id="@+id/image_url"
+                    android:layout_width="@dimen/DIMEN_270PX"
+                    android:layout_height="@dimen/DIMEN_270PX"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/download_url"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_url"
+                    android:layout_centerHorizontal="true"
+                    android:text="扫描二维码下载"
+                    android:layout_marginTop="@dimen/DIMEN_30PX"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
